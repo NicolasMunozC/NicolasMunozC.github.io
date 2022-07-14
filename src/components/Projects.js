@@ -8,6 +8,7 @@ import nataliaGajardo from "../assets/img/projects/nataliagajardo.png";
 import sexShopConfidence from "../assets/img/projects/sexshopconfidence.png";
 import ttsalach from "../assets/img/projects/ttsalach.png";
 import challenge from "../assets/img/projects/challenge.png";
+import netflixClone from "../assets/img/projects/netflix-clone.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -58,6 +59,16 @@ export const Projects = () => {
       url: "https://ttsalach.cl",
     },
   ];
+
+  const clones = [
+    {
+      title: "Netflix Clone",
+      description: "React JS / MovieDB Api / Axios / Firebase",
+      imgUrl: netflixClone,
+      url: "https://notflix-26ca8.web.app/",
+    },
+  ];
+
   
   const experiments = [
     {
@@ -84,10 +95,10 @@ export const Projects = () => {
                       <Nav.Link eventKey="first">Work</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Learning</Nav.Link>
+                      <Nav.Link eventKey="second">Clones</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Practice</Nav.Link>
+                      <Nav.Link eventKey="third">Experiments</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -106,7 +117,19 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                      <p>Working on it! :D</p>
+                      <p>Working on it! :D, you can see the repos on Github :D</p>
+                      <Row>
+                        {
+                          clones.map((clone, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...clone}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
                       <p>Yep!, working on it too! hehe :D, but you can see them on my Github Repos too :)</p>
