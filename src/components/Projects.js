@@ -63,7 +63,7 @@ export const Projects = () => {
   const clones = [
     {
       title: "Netflix Clone",
-      description: "React JS / MovieDB Api / Axios / Firebase",
+      description: "React JS / MovieDB Api / Axios / Firebase /Redux",
       imgUrl: netflixClone,
       url: "https://notflix-26ca8.web.app/",
     },
